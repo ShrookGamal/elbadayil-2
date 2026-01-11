@@ -1072,6 +1072,68 @@ select {
     .contact-wrapper { flex-direction: column; gap: 60px; }
     .custom-padding { padding: 0 20px; }
 }
+@media (max-width: 992px) {
+    /* 1. جعل الحاوية الأساسية ترتب العناصر رأسياً وفي المنتصف */
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* توسيط كل النصوص */
+        gap: 40px;
+    }
+
+    .contact-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* توسيط محتويات تفاصيل التواصل */
+    }
+
+    .contact-title {
+        font-size: 2.2rem; /* تصغير حجم العنوان ليناسب الشاشة */
+        margin: 15px 0;
+    }
+
+    .contact-p {
+        margin-bottom: 30px;
+        padding: 0 10px; /* مسافة بسيطة من الجوانب */
+    }
+
+    /* 2. توسيط كروت المعلومات (الواتساب والإيميل) */
+    .info-items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info-card {
+        width: 100%; /* الكارت ياخد العرض المتاح */
+        max-width: 450px; /* عشان ما يبقاش عريض بزيادة */
+        justify-content: center; /* توسيط المحتوى داخلياً */
+        padding: 20px 15px;
+    }
+
+    /* 3. تظبيط أرقام الواتساب المدمجة لتكون في سطر واحد أو سطرين تحت بعض حسب الحاجة */
+    .wa-numbers {
+        justify-content: center; /* توسيط الأرقام */
+        flex-wrap: wrap; /* لو الأرقام كبيرة تنزل تحت بعض */
+        gap: 10px;
+    }
+
+    .sep {
+        display: none; /* إخفاء الخط الفاصل في الموبايل ليعطي مساحة أكبر */
+    }
+
+    /* 4. تظبيط فورم عرض السعر */
+    .quote-form-container {
+        width: 100%;
+    }
+
+    .quote-card {
+        padding: 30px 20px;
+    }
+}
 /* Footer Styles */
 .main-footer {
     background: linear-gradient(135deg, #1a2421 0%, #121816 100%);
@@ -1196,7 +1258,7 @@ select {
     background: none;
     border: 2px solid var(--green); /* البرواز المطلوب */
     border-radius: 8px;
-    padding: 6px 10px;
+    padding: 6px 6px;
     color: var(--green);
     font-size: 1.2rem;
     cursor: pointer;
