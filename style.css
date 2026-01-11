@@ -1258,7 +1258,7 @@ select {
     background: none;
     border: 2px solid var(--green); /* البرواز المطلوب */
     border-radius: 8px;
-    padding: 6px 6px;
+    padding: 5px 5px;
     color: var(--green);
     font-size: 1.2rem;
     cursor: pointer;
@@ -1354,4 +1354,43 @@ select {
 
     .btn-call span { display: none; } /* إخفاء كلمة اتصل الآن وإبقاء الأيقونة في الشاشات الصغيرة جداً */
     .logo-name { font-size: 1rem; }
+}
+/* --- تعديل الهيدر (Header) --- */
+.logo-side {
+    display: flex; /* ترتيب اللوجو والاسم بجانب بعض */
+    align-items: center; /* توسيطهم رأسياً */
+    gap: 10px; /* المسافة بين اللوجو والاسم - صغريها لو حابة يقربوا أكتر */
+}
+
+.logo-name {
+    display: block;
+    white-space: nowrap; /* يمنع الكلمتين إنهم ينزلوا تحت بعض */
+    font-size: 1.4rem; /* تحكمي في حجم الخط من هنا */
+    font-weight: 900;
+}
+
+/* --- تعديل الفوتر (Footer) --- */
+.footer-logo {
+    display: flex; /* ترتيب أفقي */
+    align-items: center; /* توسيط رأسي */
+    gap: 12px; /* المسافة بين اللوجو والاسم في الفوتر */
+    margin-bottom: 20px;
+    justify-content: flex-start; /* التأكد من البداية من اليمين */
+}
+
+.footer-logo span {
+    white-space: nowrap; /* يمنع الكلمتين إنهم ينزلوا تحت بعض */
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* في الموبايل، تأكدي إنهم بيفضلوا على نفس السطر */
+@media (max-width: 768px) {
+    .logo-name, .footer-logo span {
+        font-size: 1.1rem; /* تصغير بسيط للخط في الموبايل عشان المساحة */
+    }
+    
+    .footer-logo {
+        justify-content: center; /* توسيط اللوجو والاسم مع بعض في نص الفوتر في الموبايل */
+    }
 }
