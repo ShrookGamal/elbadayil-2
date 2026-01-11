@@ -1394,3 +1394,72 @@ select {
         justify-content: center; /* توسيط اللوجو والاسم مع بعض في نص الفوتر في الموبايل */
     }
 }
+@media (max-width: 768px) {
+    /* 1. ضبط الحاوية الكبرى للهيدر */
+    .header-container {
+        display: flex;
+        justify-content: space-between; /* توزيع المساحة بين اللوجو والأزرار */
+        align-items: center;
+        padding: 5px 10px; /* تقليل البادنج لزيادة المساحة */
+    }
+
+    /* 2. تقريب اللوجو من الاسم جداً */
+    .logo-side {
+        display: flex !important;
+        flex-direction: row !important; /* التأكد أنهم بجانب بعض */
+        align-items: center !important;
+        gap: 4px !important; /* مسافة صغيرة جداً بالبكسل */
+        flex-shrink: 0; /* منع اللوجو من الصغر */
+        margin-right: 0 !important;
+    }
+
+    .main-logo {
+        height: 35px !important; /* تصغير اللوجو قليلاً لتوفير مساحة */
+        width: auto;
+    }
+
+    .logo-name {
+        font-size: 0.9rem !important; /* تصغير الخط ليكون متناسقاً */
+        white-space: nowrap !important; /* منع الكلمة من النزول لسطر جديد */
+        display: flex;
+    }
+
+    /* 3. تنسيق الأزرار (اتصل والمنيو) بجانب بعض */
+    .header-btns {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* مسافة بين زر الاتصال والمنيو */
+    }
+
+    /* تصغير زر الاتصال ليكون دائرة أو مربع صغير */
+    .btn-call {
+        width: 38px;
+        height: 38px;
+        padding: 0 !important;
+        justify-content: center;
+        border-radius: 10px; /* شكل مربع بزوايا دائرية خفيفة */
+    }
+
+    .btn-call span {
+        display: none !important; /* إخفاء كلمة "اتصل الآن" في الموبايل */
+    }
+
+    .btn-call i {
+        font-size: 1.1rem;
+        margin: 0 !important;
+    }
+
+    /* 4. جعل المنيو "مربع صغير" ببرواز */
+    .mobile-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 38px; /* عرض المربع */
+        height: 38px; /* طول المربع */
+        padding: 0 !important;
+        border: 1.5px solid var(--green) !important;
+        border-radius: 8px !important; /* زوايا المربع */
+        background: transparent;
+        font-size: 1rem !important;
+    }
+}
