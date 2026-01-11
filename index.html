@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البدائل اللامحدودة</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-side">
+                <img src="images/logo.png" alt="Logo" class="main-logo">
+                <span class="logo-name">البدائل <span class="alt-color">اللامحدودة</span></span>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-users"></i> من نحن</a></li>
+                    <li><a href="#services" class="nav-link"><i class="fas fa-fire-extinguisher"></i> خدماتنا</a></li>
+                    <li><a href="#why-us" class="nav-link"><i class="fas fa-award"></i> لماذا تختارنا</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-btns">
+                <a href="tel:0567442759" class="btn-call">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>اتصل الآن</span>
+                </a>
+                <button class="mobile-toggle" id="openMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Side Menu -->
+    <div class="mobile-overlay" id="overlay"></div>
+    <div class="mobile-side-menu" id="mobileMenu">
+        <div class="close-area">
+            <button id="closeMenu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="#about"><i class="fas fa-users"></i> من نحن</a></li>
+            <li><a href="#services"><i class="fas fa-fire-extinguisher"></i> خدماتنا</a></li>
+            <li><a href="#why-us"><i class="fas fa-award"></i> لماذا تختارنا</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
+            <li><a href="tel:0567442759" class="m-call-btn">اتصل الآن</a></li>
+        </ul>
+    </div>
+    <!-- Hero Slider -->
+    <section id="home" class="hero-section">
+        <div class="slider-container">
+            <div class="slider-wrapper" id="slider">
+                <div class="slide active"><img src="images/IMG-20260109-WA0000.jpg" alt="Slide 1"></div>
+                <div class="slide"><img src="images/IMG-20260109-WA0002.jpg" alt="Slide 2"></div>
+                <div class="slide"><img src="images/IMG-20260109-WA0003.jpg" alt="Slide 3"></div>
+                <div class="slide"><img src="images/IMG-20260109-WA0004.jpg" alt="Slide 4"></div>
+                <div class="slide"><img src="images/IMG-20260109-WA0005.jpg" alt="Slide 5"></div>
+                <div class="slide"><img src="images/IMG-20260109-WA0006.jpg" alt="Slide 6"></div>
+                <div class="slide"><img src="images/IMG-20260109-WA0007.jpg" alt="Slide 7"></div>
+            </div>
+            
+            <!-- Beautiful Arrows -->
+            <button class="slide-arrow next"><i class="fas fa-chevron-right"></i></button>
+            <button class="slide-arrow prev"><i class="fas fa-chevron-left"></i></button>
+
+            <!-- Dots -->
+            <div class="dots-container" id="dots"></div>
+        </div>
+    </section>
+    <section id="about" class="about-premium">
+    <div class="container">
+        <div class="about-flex">
+            
+            <!-- الصور: تنسيق عصري متداخل -->
+
+
+            <!-- المحتوى النصي -->
+            <div class="about-info">
+                <div class="section-tag">تعرف علينا أكثر</div>
+                <h2 class="about-head">من نحن – <span class="brand-split">البدائل اللامحدودة</span></h2>
+                
+                <p class="about-p">
+                    البدائل اللامحدودة هي شركة سعودية رائدة في حلول الأمن والسلامة المعتمدة. نحن لا نقدم مجرد خدمات، بل نوفر <strong>أماناً مستداماً</strong> عبر حلول احترافية مصممة لتلبية أدق المعايير الوطنية والدولية.
+                </p>
+                
+                <p class="about-p">
+                    بخبرات هندسية عميقة وفريق من الفنيين المعتمدين، نستخدم أحدث التقنيات لضمان حماية منشأتكم من مخاطر الحريق، بدءاً من التوريد والتركيب وصولاً إلى إصدار التقارير المعتمدة وعقود الصيانة الدورية.
+                </p>
+
+                <!-- شبكة المميزات: 2 في كل سطر بمنتهى النظام -->
+                <div class="about-grid">
+                    <div class="q-card">
+                        <div class="q-icon icon-r"><i class="fas fa-certificate"></i></div>
+                        <div class="q-text">
+                            <h4>حلول معتمدة</h4>
+                            <p>أنظمة مطابقة للدفاع المدني.</p>
+                        </div>
+                    </div>
+                    <div class="q-card">
+                        <div class="q-icon icon-g"><i class="fas fa-user-shield"></i></div>
+                        <div class="q-text">
+                            <h4>فريق خبراء</h4>
+                            <p>مهندسون وفنيون ذوو كفاءة.</p>
+                        </div>
+                    </div>
+                    <div class="q-card">
+                        <div class="q-icon icon-g"><i class="fas fa-check-double"></i></div>
+                        <div class="q-text">
+                            <h4>جودة مثبتة</h4>
+                            <p>معايير جودة عالمية NFPA.</p>
+                        </div>
+                    </div>
+                    <div class="q-card">
+                        <div class="q-icon icon-r"><i class="fas fa-headset"></i></div>
+                        <div class="q-text">
+                            <h4>دعم 24/7</h4>
+                            <p>صيانة دورية واستجابة سريعة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visuals">
+                <div class="img-box-large">
+                    <img src="images/whisk.webp" alt="Safety System">
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    </section>
+    <section id="services" class="services-section">
+    <div class="container">
+        <div class="services-header">
+            <h2 class="services-title">حلولنا المتكاملة في السلامة من الحرائق</h2>
+            <p class="services-subtitle">نقدم مجموعة شاملة من الخدمات المصممة لحماية منشآتك وأصولك وأفرادك</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- الخدمة 1 -->
+             <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-bolt s-icon"></i>
+                    <h3>تقرير فني فوري</h3>
+                    <p>تقرير فني شامل يتم إعداده فوراً مع توصيات فورية لتحسين السلامة من الحرائق.</p>
+                    <ul class="service-list">
+                        <li>يتم إصدار التقرير خلال 24 ساعة</li>
+                        <li>يعتمد من خلال منصات (بلدي / سلامة)</li>
+                    </ul>
+                </div>
+                <a href="#form-service-4" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+
+            <!-- الخدمة 2 -->
+             <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-file-signature s-icon"></i>
+                    <h3>تقرير فني غير فوري</h3>
+                    <p>تقرير مفصل مع تحليل شامل لاحتياجات السلامة من الحرائق في المنشأة.</p>
+                    <ul class="service-list">
+                        <li>يتم إصدار التقرير خلال 24 ساعة</li>
+                        <li>يعتمد من خلال منصات (بلدي / سلامة)</li>
+                    </ul>
+                </div>
+                <a href="#form-service-3" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+
+            <!-- الخدمة 3 -->
+            <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-certificate s-icon"></i>
+                    <h3>شهادة تركيب أدوات السلامة</h3>
+                    <p>إصدار شهادات معتمدة لتركيب أنظمة السلامة ومكافحة الحريق حسب المعايير.</p>
+                    <ul class="service-list">
+                        <li>يتم إصدار التقرير خلال 24 ساعة</li>
+                        <li>يعتمد من خلال منصات (بلدي / سلامة)</li>
+                    </ul>
+                </div>
+                <a href="#form-service-2" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <!-- الخدمة 4 -->
+            <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-file-contract s-icon"></i>
+                    <h3>عقد الصيانة</h3>
+                    <p>عقود صيانة دورية شاملة لأنظمة السلامة والحماية من الحرائق.</p>
+                    <ul class="service-list">
+                        <li>فحوصات دورية شهرية/سنوية</li>
+                        <li>صيانة وقائية للأنظمة</li>
+                        <li>تقرير مفصل بعد كل زيارة</li>
+                        <li>استجابة سريعة للطوارئ</li>
+                    </ul>
+                </div>
+                <a href="#form-service-1" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <!-- الخدمة 5 -->
+            <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-drafting-compass s-icon"></i>
+                    <h3>مخطط هندسي</h3>
+                    <p>تصميم مخططات هندسية متكاملة لأنظمة السلامة من الحرائق.</p>
+                    <ul class="service-list">
+                        <li>رفع مساحي معماري معتمد</li>
+                        <li>إنشاء المخططات (المعمارية - الإنشائية - الميكانيكية - الكهربائية)</li>
+                        <li>رفع الطلب لموقع الأمانة</li>
+                        <li>إصدار رخصة البناء</li>
+                    </ul>
+                </div>
+                <a href="#form-service-8" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <!-- الخدمة 6 -->
+            <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-map s-icon"></i>
+                    <h3>مخطط سلامة</h3>
+                    <p>إعداد خطط سلامة متكاملة للمنشآت وفق أعلى المعايير.</p>
+                    <ul class="service-list">
+                        <li>كود البناء ومتطلبات الدفاع المدني</li>
+                        <li>خرائط توزيع أنظمة الإنذار</li>
+                        <li>خرائط توزيع أنظمة الإطفاء وطفايات الحريق</li>
+                        <li>خرائط توزيع أنظمة سحب الدخان</li>
+                        <li>دراسة حجم وسعة مضخة الحريق</li>
+                        <li>لايف سيفتي (إنارة احتياطية - أبواب طوارئ - لوحات إرشادية - نقاط التجمع)</li>
+                    </ul>
+                </div>
+                <a href="#form-service-7" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+
+            <!-- الخدمة 7 -->
+            <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-truck-loading s-icon"></i>
+                    <h3>توريد وتركيب أنظمة السلامة</h3>
+                    <p>حلول متكاملة للمشاريع الحكومية والخاصة.</p>
+                    <ul class="service-list">
+                        <li>أنظمة إنذار الحريق العادي والمعنون</li>
+                        <li>أنظمة إطفاء متكاملة (رش آلي - صناديق حريق - مضخات - طفايات)</li>
+                        <li>أنظمة الغاز (نوفيك 1230 - CO2 - FM200 - فاير برو - كيتشن هود)</li>
+                        <li>لايف سيفتي (إنارة احتياطية - أبواب طوارئ - لوحات إرشادية - نقاط التجمع)</li>
+                    </ul>
+                </div>
+                <a href="#form-service-6" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <!-- الخدمة 8 -->
+             <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-tools s-icon"></i>
+                    <h3>إعادة تأهيل الأنظمة</h3>
+                    <p>ترقية وتحديث أنظمة السلامة القديمة لمواكبة المعايير الحديثة.</p>
+                    <ul class="service-list">
+                        <li>تقييم حالة الأنظمة الحالية</li>
+                        <li>اقتراحات التحديث والتحسين</li>
+                        <li>استبدال المعدات القديمة</li>
+                        <li>تحسين كفاءة الأنظمة</li>
+                    </ul>
+                </div>
+                <a href="#form-service-5" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            
+
+            <!-- الخدمة 9 -->
+            <div class="service-card">
+                <div class="service-content">
+                    <i class="fas fa-fire-extinguisher s-icon"></i>
+                    <h3>صيانة وتعبئة طفايات الحريق</h3>
+                    <p>خدمات صيانة وتعبئة طفايات الحريق لضمان جاهزيتها للاستخدام الفوري.</p>
+                    <ul class="service-list">
+                        <li>فحص دوري شامل لحالة الطفايات</li>
+                        <li>تعبئة جميع أنواع طفايات الحريق</li>
+                        <li>استبدال القطع التالفة والمستهلكة</li>
+                        <li>إصدار شهادات صيانة معتمدة</li>
+                        <li>خدمة سريعة في الموقع</li>
+                        <li>ضمان جودة العمل والمواد</li>
+                    </ul>
+                </div>
+                <a href="#form-service-9" class="btn-request">طلب الخدمة <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Why Choose Us Section - Updated with Image Content -->
+    <section id="why-us" class="why-us-section">
+    <div class="container custom-padding">
+        <div class="why-us-wrapper">
+            
+            <!-- الجانب النصي: المميزات الستة -->
+            <div class="why-us-content">
+                <div class="section-tag-red">لماذا نحن؟</div>
+                <h2 class="why-title">لماذا تختار <span class="green-text">البدائل اللامحدودة؟</span></h2>
+                
+                <div class="benefits-grid">
+                    <!-- 1 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon red"><i class="fas fa-file-shield"></i></div>
+                        <div class="benefit-info">
+                            <h3>حلول معتمدة وشاملة</h3>
+                            <p>خدمات متكاملة معتمدة من الجهات الرسمية.</p>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon green"><i class="fas fa-hard-hat"></i></div>
+                        <div class="benefit-info">
+                            <h3>خبرة ميدانية</h3>
+                            <p>فريق من المهندسين والفنيين المؤهلين.</p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon green"><i class="fas fa-rocket"></i></div>
+                        <div class="benefit-info">
+                            <h3>التزام بالجودة</h3>
+                            <p>تنفيذ المشاريع في الوقت المحدد وبأعلى دقة.</p>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon red"><i class="fas fa-certificate"></i></div>
+                        <div class="benefit-info">
+                            <h3>اعتمادات رسمية</h3>
+                            <p>مساعدتك في تلبية اشتراطات الدفاع المدني.</p>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon red"><i class="fas fa-wrench"></i></div>
+                        <div class="benefit-info">
+                            <h3>دعم فني مستمر</h3>
+                            <p>خدمة ما بعد البيع والصيانة الدورية.</p>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon green"><i class="fas fa-handshake"></i></div>
+                        <div class="benefit-info">
+                            <h3>شريك طويل الأمد</h3>
+                            <p>علاقة مستدامة قائمة على الثقة والاحترافية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الجانب البصري: الفيديو -->
+            <div class="why-us-visuals">
+                <div class="video-wrapper-premium">
+                    <video controls muted loop playsinline class="brand-video-full">
+                        <source src="videos/VID-20260109-WA0008.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+    <section id="contact" class="contact-section">
+    <div class="container custom-padding">
+        <div class="contact-wrapper">
+            
+            <div class="contact-details">
+                <div class="section-tag-red">تواصل معنا الآن</div>
+                <h2 class="contact-title">نحن دائماً <span class="green-text">بالقرب منك</span></h2>
+                <p class="contact-p">فريقنا جاهز للرد على استفساراتكم وتقديم الدعم الفني اللازم لضمان أمان منشآتكم.</p>
+                
+                <div class="info-items">
+                    <!-- كارت الواتساب المدمج -->
+                    <div class="info-card">
+                        <div class="info-icon wa-bg"><i class="fab fa-whatsapp"></i></div>
+                        <div class="info-text">
+                            <span>تواصل معنا عبر الواتساب</span>
+                            <div class="wa-numbers">
+                                <a href="https://wa.me/966567442759" target="_blank">0567442759</a>
+                                <span class="sep">|</span>
+                                <a href="https://wa.me/966548729715" target="_blank">0548729715</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- البريد الإلكتروني -->
+                    <a href="mailto:Info@albadayilunlimited.com" class="info-card">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text">
+                            <span>البريد الإلكتروني</span>
+                            <strong>Info@albadayilunlimited.com</strong>
+                        </div>
+                    </a>
+
+                    <!-- العنوان -->
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-text">
+                            <span>العنوان</span>
+                            <strong>الرياض، المملكة العربية السعودية</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نموذج عرض السعر -->
+            <div class="quote-form-container">
+                <div class="quote-card">
+                    <h3>احصل على عرض سعر</h3>
+                    <p>أدخل بياناتك وسنتواصل معك لتوفير أفضل الحلول.</p>
+                    
+                    <form class="actual-form">
+                        <div class="input-group">
+                            <label><i class="fas fa-user"></i> الاسم بالكامل</label>
+                            <input type="text" placeholder="أدخل اسمك هنا" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label><i class="fas fa-phone"></i> رقم الهاتف</label>
+                            <input type="tel" placeholder="05XXXXXXXX" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label><i class="fas fa-comment-alt"></i> تفاصيل الخدمة المطلوبة</label>
+                            <textarea rows="4" placeholder="اكتب استفسارك أو تفاصيل الخدمة..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-quote-btn">
+                            إرسال الطلب الآن <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+    <!-- Footer Section -->
+<footer class="main-footer">
+    <div class="container custom-padding">
+        <div class="footer-grid">
+            
+            <!-- العمود الأول: عن الشركة -->
+            <div class="footer-col about-col">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <span>البدائل <span class="green-text">اللامحدودة</span></span>
+                </div>
+                <p class="footer-desc">
+                    نحن رواد في تقديم حلول الأمن والسلامة والحماية من الحريق في المملكة العربية السعودية. نلتزم بأعلى معايير الجودة لضمان أمان منشآتكم وأرواحكم بأحدث التقنيات العالمية.
+                </p>
+            </div>
+
+            <!-- العمود الثاني: روابط سريعة -->
+            <div class="footer-col links-col">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#why-us">لماذا تختارنا</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: تواصل معنا -->
+            <div class="footer-col contact-col">
+                <h3>تواصل معنا</h3>
+                <div class="footer-contact-info">
+                    <div class="f-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>الرياض، المملكة العربية السعودية</span>
+                    </div>
+                    <div class="f-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:0567442759">0567442759</a>
+                    </div>
+                    <div class="f-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:Info@albadayilunlimited.com">Info@albadayilunlimited.com</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- السطر السفلي: حقوق الملكية -->
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 البدائل اللامحدودة</p>
+            <p>تصميم وبرمجة <a href="https://www.facebook.com/share/17UzqgSwiu/" target="_blank">GMTWeb</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- زر واتساب عائم -->
+<a href="https://wa.me/966567442759" class="floating-whatsapp" target="_blank" title="تواصل معنا عبر واتساب">
+    <i class="fab fa-whatsapp"></i>
+    <span class="pulse"></span>
+</a>
+    <!-- Service Request Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card">
+        <button class="close-modal" id="closeModal">&times;</button>
+        
+        <div class="modal-header">
+            <h2 id="modalTitle">طلب خدمة: تقرير فني فوري</h2>
+            <p id="modalSubtitle">تقرير فني شامل يتم إعداده فوراً مع توصيات فورية لتحسين السلامة من الحرائق</p>
+        </div>
+
+        <form class="request-form">
+            <div class="form-grid">
+                <!-- الصف الأول -->
+                <div class="form-group">
+                    <label>الرقم الوطني الموحد</label>
+                    <input type="text" placeholder="الرقم الوطني">
+                </div>
+                <div class="form-group">
+                    <label>رقم السجل التجاري</label>
+                    <input type="text" placeholder="رقم السجل">
+                </div>
+                <div class="form-group">
+                    <label>كود النشاط</label>
+                    <input type="text" placeholder="كود النشاط">
+                </div>
+                <div class="form-group">
+                    <label>مساحة المحل</label>
+                    <input type="number" value="0">
+                </div>
+
+                <!-- الصف الثاني -->
+                <div class="form-group">
+                    <label>المنطقة</label>
+                    <input type="text" placeholder="المنطقة">
+                </div>
+                <div class="form-group">
+                    <label>المدينة</label>
+                    <input type="text" placeholder="المدينة">
+                </div>
+                <div class="form-group">
+                    <label>الحي</label>
+                    <input type="text" placeholder="الحي">
+                </div>
+                <div class="form-group">
+                    <label>الشارع</label>
+                    <input type="text" placeholder="الشارع">
+                </div>
+
+                <!-- الصف الثالث -->
+                <div class="form-group">
+                    <label>اسم اللوحة</label>
+                    <input type="text" placeholder="اسم اللوحة">
+                </div>
+                <div class="form-group">
+                    <label>مساحة المبنى</label>
+                    <input type="number" value="0">
+                </div>
+                <div class="form-group">
+                    <label>الاسم الكامل</label>
+                    <input type="text" placeholder="الاسم بالكامل">
+                </div>
+                <div class="form-group">
+                    <label>رقم الجوال</label>
+                    <input type="text" placeholder="05XXXXXXXX">
+                </div>
+
+                <!-- الصف الرابع -->
+                <div class="form-group">
+                    <label>عدد الطفايات</label>
+                    <input type="number" value="0">
+                </div>
+                <div class="form-group">
+                    <label>عدد كواشف الدخان</label>
+                    <input type="number" value="0">
+                </div>
+                <div class="form-group">
+                    <label>عدد أضواء الطوارئ</label>
+                    <input type="number" value="0">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-request-btn">إرسال الطلب</button>
+        </form>
+        <!-- فورم عقد الصيانة (تظهر فقط عند اختيار هذه الخدمة) -->
+        <form id="maintenanceForm" class="service-form" style="display: none;">
+    <div class="form-header">
+        <h2 class="form-title">طلب عقد صيانة</h2>
+        <p class="form-subtitle">الرجاء ملء النموذج بالكامل</p>
+    </div>
+
+    <div class="form-grid-4">
+        <div class="form-group">
+            <label>هل أنت شركة أم مؤسسة؟</label>
+            <select><option>اختر النوع</option><option>شركة</option><option>مؤسسة</option></select>
+        </div>
+        <div class="form-group">
+            <label>الاسم</label>
+            <input type="text" placeholder="الاسم">
+        </div>
+        <div class="form-group">
+            <label>رقم السجل التجاري</label>
+            <input type="text" placeholder="رقم السجل">
+        </div>
+        <div class="form-group">
+            <label>رقم القطعة</label>
+            <input type="text" placeholder="رقم القطعة">
+        </div>
+    </div>
+
+    <div class="form-grid-4">
+        <div class="form-group">
+            <label>رقم المخطط</label>
+            <input type="text" placeholder="رقم المخطط">
+        </div>
+        <div class="form-group">
+            <label>المساحة</label>
+            <input type="text" placeholder="المساحة">
+        </div>
+        <div class="form-group">
+            <label>العنوان</label>
+            <input type="text" placeholder="العنوان">
+        </div>
+        <div class="form-group">
+            <label>الهاتف</label>
+            <input type="text" placeholder="رقم الهاتف">
+        </div>
+    </div>
+
+    <div class="form-grid-3">
+        <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" placeholder="Email@example.com">
+        </div>
+        <div class="form-group">
+            <label>النشاط</label>
+            <input type="text" placeholder="النشاط">
+        </div>
+        <div class="form-group">
+            <label>الرقم الضريبي</label>
+            <input type="text" placeholder="الرقم الضريبي">
+        </div>
+    </div>
+
+    <!-- قسم الأنظمة والحالة -->
+    <div class="form-section-title">الأنظمة والحالة</div>
+    <div class="systems-row">
+        <div class="form-group">
+            <label>النظام</label>
+            <select >
+                <option>نظام انذار مبكر </option>
+                <option> نظام الرش الالي و صناديق الحريق</option>
+                <option> نظام FM-200</option>
+                <option> نظام نوفيك 1230</option>
+                <option> نظام co2</option>
+                <option> نظام فاير برو</option>
+                <option> نظام كيتشن هود</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>الحالة</label>
+            <select>
+                <option>اختر الحالة</option>
+                <option> لا يعمل </option>
+                <option> يعمل و لكن يحتاج صيانة</option>
+            </select>
+        </div>
+        <button type="button" class="add-btn"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- قسم أنواع الطفايات -->
+    <div class="form-section-title">أنواع الطفايات</div>
+    <div class="form-grid-3">
+        <div class="form-group">
+            <label>نوع الطفاية</label>
+            <select>
+                <option>اختر النوع</option>
+                <option>بودرة </option>
+                <option> ثاني اكسيد الكربون</option>
+                <option> فوم</option>
+                <option> مائية</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>وزن الطفاية</label>
+            <select>
+                <option>اختر الوزن</option>
+                <option> 1 كجم</option>
+                <option> 2 كجم</option>
+                <option> 3 كجم</option>
+                <option> 4 كجم</option>
+                <option> 6 كجم</option>
+                <option> 10 كجم</option>
+                <option> 12 كجم</option>
+                <option> 25 كجم</option>
+                <option> 50 كجم</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>عدد الطفايات</label>
+            <input type="number" value="0">
+        </div>
+    </div>
+
+    <!-- قسم رفع الملفات -->
+    <div class="form-section-title">الملفات المطلوب رفعها</div>
+    <div class="upload-grid">
+        <div class="upload-item">
+            <span>عقد الصيانة</span>
+            <label class="custom-upload">اختر ملف <input type="file" hidden></label>
+        </div>
+        <div class="upload-item">
+            <span>عقد الإيجار</span>
+            <label class="custom-upload">اختر ملف <input type="file" hidden></label>
+        </div>
+        <div class="upload-item">
+            <span>السجل التجاري</span>
+            <label class="custom-upload">اختر ملف <input type="file" hidden></label>
+        </div>
+        <div class="upload-item">
+            <span>رخصة البناء</span>
+            <label class="custom-upload">اختر ملف <input type="file" hidden></label>
+        </div>
+    </div>
+
+    <button type="submit" class="submit-yellow-btn">إرسال الطلب</button>
+        </form>
+        <!-- فورم مخطط هندسي (الخدمة رقم 5) -->
+       <form id="engineeringForm" class="service-form" style="display: none;">
+    <div class="form-header">
+        <h2 class="form-title">مخطط هندسي</h2>
+        <p class="form-subtitle">الرجاء ملء البيانات المطلوبة</p>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label>الاسم</label>
+            <input type="text" placeholder="الاسم بالكامل">
+        </div>
+        <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="text" placeholder="05XXXXXXXX">
+        </div>
+        <div class="form-group">
+            <label>النشاط المطلوب</label>
+            <input type="text" placeholder="النشاط المطلوب">
+        </div>
+        <div class="form-group">
+            <label>العنوان</label>
+            <input type="text" placeholder="العنوان بالتفصيل">
+        </div>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label>هوية المالك</label>
+            <div class="custom-file-input">
+                <input type="file" id="ownerID" hidden>
+                <label for="ownerID" class="upload-btn-outline">
+                    <i class="fas fa-cloud-upload-alt"></i> Choose File
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>صك الملكية</label>
+            <div class="custom-file-input">
+                <input type="file" id="propertyDeed" hidden>
+                <label for="propertyDeed" class="upload-btn-outline">
+                    <i class="fas fa-cloud-upload-alt"></i> Choose File
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="submit-yellow-btn">إرسال الطلب</button>
+       </form> 
+       <!-- فورم مخطط السلامة (الخدمة رقم 7) -->
+       <form id="safetyPlanForm" class="service-form" style="display: none;">
+    <div class="form-header">
+        <h2 class="form-title-brand">مخطط السلامة</h2>
+        <p class="form-subtitle">الرجاء ملء البيانات المطلوبة</p>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label>الاسم</label>
+            <input type="text" placeholder="الاسم بالكامل">
+        </div>
+        <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="text" placeholder="05XXXXXXXX">
+        </div>
+    </div>
+
+    <div class="form-grid-3">
+        <div class="form-group">
+            <label>ملف PDF / CAD مخطط المعماري</label>
+            <div class="custom-file-input">
+                <input type="file" id="archPlan" hidden>
+                <label for="archPlan" class="upload-btn-brand">
+                    <i class="fas fa-file-pdf"></i> Choose File
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>رخصة البناء</label>
+            <div class="custom-file-input">
+                <input type="file" id="buildLicense" hidden>
+                <label for="buildLicense" class="upload-btn-brand">
+                    <i class="fas fa-file-contract"></i> Choose File
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>السجل التجاري</label>
+            <div class="custom-file-input">
+                <input type="file" id="commRegister" hidden>
+                <label for="commRegister" class="upload-btn-brand">
+                    <i class="fas fa-file-invoice"></i> Choose File
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="submit-btn-brand">إرسال الطلب</button>
+       </form>
+       <!-- فورم توريد وتركيب أنظمة السلامة (الخدمة رقم 6) -->
+      <form id="supplyInstallForm" class="service-form" style="display: none;">
+    <div class="form-header">
+        <h2 class="form-title-brand">توريد وتركيب أنظمة السلامة</h2>
+        <p class="form-subtitle">الرجاء ملء البيانات المطلوبة</p>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label>الاسم</label>
+            <input type="text" placeholder="الاسم بالكامل">
+        </div>
+        <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="text" placeholder="05XXXXXXXX">
+        </div>
+    </div>
+
+    <div class="form-group" style="margin-top: 20px;">
+        <label>مخطط السلامة</label>
+        <div class="custom-file-input">
+            <input type="file" id="safetyPlanFile" hidden>
+            <label for="safetyPlanFile" class="upload-btn-brand">
+                <i class="fas fa-file-image"></i> اختر ملف مخطط السلامة
+            </label>
+        </div>
+    </div>
+
+    <button type="submit" class="submit-btn-brand">إرسال الطلب</button>
+      </form>
+      <!-- فورم إعادة تأهيل الأنظمة (الخدمة رقم 5) -->
+      <form id="rehabForm" class="service-form" style="display: none;">
+    <div class="form-header">
+        <h2 class="form-title-brand">إعادة تأهيل الأنظمة</h2>
+        <p class="form-subtitle">الرجاء ملء البيانات التالية</p>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label>الاسم</label>
+        <input type="text" placeholder="الاسم بالكامل">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label>رقم الجوال</label>
+        <input type="text" placeholder="05XXXXXXXX">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label>العنوان</label>
+        <input type="text" placeholder="العنوان بالتفصيل">
+    </div>
+
+    <button type="submit" class="submit-btn-brand">إرسال الطلب</button>
+      </form>
+      <!-- فورم صيانة وتعبئة طفايات الحريق (الخدمة رقم 9) -->
+     <form id="extinguisherForm" class="service-form" style="display: none;">
+    <div class="form-header">
+        <h2 class="form-title-brand">طلب صيانة وتعبئة طفايات الحريق</h2>
+        <p class="form-subtitle">الرجاء ملء النموذج بالكامل</p>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label>الاسم بالكامل</label>
+            <input type="text" placeholder="الاسم بالكامل">
+        </div>
+        <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="text" placeholder="05XXXXXXXX">
+        </div>
+    </div>
+
+    <div class="form-section-title-brand">تفاصيل الطفايات</div>
+    
+    <!-- حاوية التفاصيل - تم تغيير لون الخلفية للأخضر الخفيف بدلاً من الأصفر -->
+    <div class="details-container-brand">
+        <div class="form-grid-4">
+            <div class="form-group">
+                <label>نوع الطفاية</label>
+                <select>
+                    <option>اختر نوع الطفاية</option>
+                    <option>بودرة جافة</option>
+                    <option>ثاني أكسيد الكربون CO2</option>
+                    <option> فووم  </option>
+                    <option> مائية  </option>
+                    <option> كيماوية رطبة  </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>وزن الطفاية (كجم)</label>
+                <select>
+                    <option>اختر الوزن</option>
+                    <option>1 كجم</option>
+                    <option>2 كجم</option>
+                    <option>3 كجم</option>
+                    <option>4 كجم</option>
+                    <option>6 كجم</option>
+                    <option>10 كجم</option>
+                    <option>12 كجم</option>
+                    <option>25 كجم</option>
+                    <option>50 كجم</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>العدد</label>
+                <input type="number" value="0">
+            </div>
+            <div class="form-group">
+                <label>نوع الخدمة</label>
+                <select>
+                    <option>اختر نوع الخدمة</option>
+                    <option>تعبئة </option>
+                    <option>صيانة </option>
+                    <option>  صيانة و تعبئة</option>
+                </select>
+            </div>
+        </div>
+        
+        <button type="button" class="add-more-btn">
+            <i class="fas fa-plus-circle"></i> إضافة طفاية أخرى
+        </button>
+    </div>
+
+    <button type="submit" class="submit-btn-brand">إرسال الطلب</button>
+     </form>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
