@@ -78,11 +78,6 @@ body { background-color: var(--light); overflow-x: hidden; }
     transition: var(--transition);
 }
 .btn-call:hover { background: var(--red); transform: translateY(-3px); }
-
-/* Mobile Menu Control - مخفي تماماً في اللاب */
-.mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
-.mobile-side-menu { display: none; } 
-
 /* Hero Slider */
 .hero-section {
     height: 100vh; 
@@ -1185,4 +1180,116 @@ select {
     .footer-socials { justify-content: center; }
     .f-info-item { justify-content: center; }
     .floating-whatsapp { bottom: 20px; right: 20px; width: 55px; height: 55px; font-size: 1.8rem; }
+}
+/* --- Header General Styling --- */
+
+
+.logo-side { display: flex; align-items: center; gap: 10px; }
+.main-logo { height: 45px; }
+.logo-name { font-weight: 900; font-size: 1.2rem; color: var(--green); }
+.alt-color { color: var(--red); }
+
+
+/* --- تعديل زر المنيو (التلات شرطات ببرواز) --- */
+.mobile-toggle {
+    display: none; /* يظهر في الموبايل فقط */
+    background: none;
+    border: 2px solid var(--green); /* البرواز المطلوب */
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: var(--green);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mobile-toggle:hover {
+    background: var(--green);
+    color: white;
+}
+
+/* --- Full Screen Mobile Menu --- */
+.mobile-side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* تبدأ من خارج الشاشة يميناً */
+    width: 100%; /* تغطي الشاشة بالكامل */
+    height: 100vh;
+    background: var(--green); /* اللون الأخضر المطلوب */
+    z-index: 3000;
+    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-side-menu.open {
+    right: 0; /* تظهر لتغطي الشاشة */
+}
+
+/* زر الإغلاق داخل المنيو */
+.close-area {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#closeMenu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* روابط المنيو في الموبايل */
+.mobile-nav-list {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-nav-list li {
+    margin: 25px 0;
+}
+
+.mobile-nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.m-call-btn {
+    background: white;
+    color: var(--green) !important;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* الـ Overlay (اختياري لو المنيو كاملة) */
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2500;
+    display: none;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+    .desktop-nav { display: none; }
+    .mobile-toggle { display: block; }
+    
+    .header-btns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-call span { display: none; } /* إخفاء كلمة اتصل الآن وإبقاء الأيقونة في الشاشات الصغيرة جداً */
+    .logo-name { font-size: 1rem; }
 }
