@@ -1258,7 +1258,7 @@ select {
     background: none;
     border: 2px solid var(--green); /* البرواز المطلوب */
     border-radius: 8px;
-    padding: 5px 5px;
+    padding: 2px ;
     color: var(--green);
     font-size: 1.2rem;
     cursor: pointer;
@@ -1359,13 +1359,13 @@ select {
 .logo-side {
     display: flex; /* ترتيب اللوجو والاسم بجانب بعض */
     align-items: center; /* توسيطهم رأسياً */
-    gap: 10px; /* المسافة بين اللوجو والاسم - صغريها لو حابة يقربوا أكتر */
+    gap: 2px; /* المسافة بين اللوجو والاسم - صغريها لو حابة يقربوا أكتر */
 }
 
 .logo-name {
     display: block;
     white-space: nowrap; /* يمنع الكلمتين إنهم ينزلوا تحت بعض */
-    font-size: 1.4rem; /* تحكمي في حجم الخط من هنا */
+    font-size: 1.2rem; /* تحكمي في حجم الخط من هنا */
     font-weight: 900;
 }
 
@@ -1373,7 +1373,7 @@ select {
 .footer-logo {
     display: flex; /* ترتيب أفقي */
     align-items: center; /* توسيط رأسي */
-    gap: 12px; /* المسافة بين اللوجو والاسم في الفوتر */
+    gap: 2px; /* المسافة بين اللوجو والاسم في الفوتر */
     margin-bottom: 20px;
     justify-content: flex-start; /* التأكد من البداية من اليمين */
 }
