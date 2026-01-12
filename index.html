@@ -386,7 +386,7 @@
                 <div class="footer-col about-col">
                 <div class="footer-logo">
                     <img src="images/logo.png" alt="Logo">
-                    <span>البدائل <span class="green-text">اللامحدودة</span></span>
+                    <span>شركة البدائل <span class="green-text">اللامحدودة</span></span>
                 </div>
                 <p class="footer-desc">
                     نحن رواد في تقديم حلول الأمن والسلامة والحماية من الحريق في المملكة العربية السعودية. نلتزم بأعلى معايير الجودة لضمان أمان منشآتكم وأرواحكم بأحدث التقنيات العالمية.
@@ -421,7 +421,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>جميع الحقوق محفوظة &copy; 2026 البدائل اللامحدودة</p>
+            <p>جميع الحقوق محفوظة &copy; 2026 شركة البدائل اللامحدودة</p>
             <p>تصميم وبرمجة <a href="https://www.facebook.com/share/17UzqgSwiu/" target="_blank">GMTWeb</a></p>
         </div>
     </div>
@@ -618,24 +618,40 @@
         </div>
     </div>
     <div class="form-section-title">الملفات المطلوب رفعها</div>
-    <div class="upload-grid">
-        <div class="upload-item">
-            <span>عقد الصيانة</span>
-            <label class="custom-upload">اختر ملف <input type="file" hidden></label>
+     <div class="upload-grid">
+      <div class="upload-item">
+        <span>عقد الصيانة</span>
+        <input type="file" id="file_maintenance" class="input-file-brand" hidden>
+        <label for="file_maintenance" class="custom-upload-label">
+            <i class="fas fa-file-upload"></i> اختر ملف
+        </label>
+        <div class="file-status">لم يتم اختيار ملف</div>
+       </div>
+       <div class="upload-item">
+        <span>عقد الإيجار</span>
+        <input type="file" id="file_rent" class="input-file-brand" hidden>
+        <label for="file_rent" class="custom-upload-label">
+            <i class="fas fa-file-upload"></i> اختر ملف
+        </label>
+        <div class="file-status">لم يتم اختيار ملف</div>
         </div>
-        <div class="upload-item">
-            <span>عقد الإيجار</span>
-            <label class="custom-upload">اختر ملف <input type="file" hidden></label>
+       <div class="upload-item">
+        <span>السجل التجاري</span>
+        <input type="file" id="file_cr" class="input-file-brand" hidden>
+        <label for="file_cr" class="custom-upload-label">
+            <i class="fas fa-file-upload"></i> اختر ملف
+        </label>
+        <div class="file-status">لم يتم اختيار ملف</div>
         </div>
-        <div class="upload-item">
-            <span>السجل التجاري</span>
-            <label class="custom-upload">اختر ملف <input type="file" hidden></label>
+       <div class="upload-item">
+        <span>رخصة البناء</span>
+        <input type="file" id="file_license" class="input-file-brand" hidden>
+        <label for="file_license" class="custom-upload-label">
+            <i class="fas fa-file-upload"></i> اختر ملف
+        </label>
+        <div class="file-status">لم يتم اختيار ملف</div>
         </div>
-        <div class="upload-item">
-            <span>رخصة البناء</span>
-            <label class="custom-upload">اختر ملف <input type="file" hidden></label>
-        </div>
-    </div>
+     </div>
     <button type="submit" class="submit-yellow-btn">إرسال الطلب</button>
         </form>
        <form id="engineeringForm" class="service-form" style="display: none;">
@@ -662,25 +678,27 @@
         </div>
     </div>
     <div class="form-grid">
-        <div class="form-group">
-            <label>هوية المالك</label>
-            <div class="custom-file-input">
-                <input type="file" id="ownerID" hidden>
-                <label for="ownerID" class="upload-btn-outline">
-                    <i class="fas fa-cloud-upload-alt"></i> Choose File
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <label>صك الملكية</label>
-            <div class="custom-file-input">
-                <input type="file" id="propertyDeed" hidden>
-                <label for="propertyDeed" class="upload-btn-outline">
-                    <i class="fas fa-cloud-upload-alt"></i> Choose File
-                </label>
-            </div>
+    <div class="form-group">
+        <label>هوية المالك</label>
+        <div class="custom-file-input">
+            <input type="file" id="ownerID" class="file-input-element">
+            <label for="ownerID" class="upload-btn-outline">
+                <i class="fas fa-cloud-upload-alt"></i> Choose File
+            </label>
+            <div class="file-name-val" id="val-ownerID"></div>
         </div>
     </div>
+    <div class="form-group">
+        <label>صك الملكية</label>
+        <div class="custom-file-input">
+            <input type="file" id="propertyDeed" class="file-input-element">
+            <label for="propertyDeed" class="upload-btn-outline">
+                <i class="fas fa-cloud-upload-alt"></i> Choose File
+            </label>
+            <div class="file-name-val" id="val-propertyDeed"></div>
+        </div>
+    </div>
+</div>
     <button type="submit" class="submit-yellow-btn">إرسال الطلب</button>
        </form> 
        <form id="safetyPlanForm" class="service-form" style="display: none;">
@@ -699,34 +717,37 @@
         </div>
     </div>
     <div class="form-grid-3">
-        <div class="form-group">
-            <label>ملف PDF / CAD مخطط المعماري</label>
-            <div class="custom-file-input">
-                <input type="file" id="archPlan" hidden>
-                <label for="archPlan" class="upload-btn-brand">
-                    <i class="fas fa-file-pdf"></i> Choose File
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <label>رخصة البناء</label>
-            <div class="custom-file-input">
-                <input type="file" id="buildLicense" hidden>
-                <label for="buildLicense" class="upload-btn-brand">
-                    <i class="fas fa-file-contract"></i> Choose File
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-            <label>السجل التجاري</label>
-            <div class="custom-file-input">
-                <input type="file" id="commRegister" hidden>
-                <label for="commRegister" class="upload-btn-brand">
-                    <i class="fas fa-file-invoice"></i> Choose File
-                </label>
-            </div>
+    <div class="form-group">
+        <label>ملف PDF / CAD مخطط المعماري</label>
+        <div class="custom-file-input">
+            <input type="file" id="archPlan" class="file-input-element">
+            <label for="archPlan" class="upload-btn-brand">
+                <i class="fas fa-file-pdf"></i> Choose File
+            </label>
+            <div class="file-name-val" id="val-archPlan"></div>
         </div>
     </div>
+    <div class="form-group">
+        <label>رخصة البناء</label>
+        <div class="custom-file-input">
+            <input type="file" id="buildLicense" class="file-input-element">
+            <label for="buildLicense" class="upload-btn-brand">
+                <i class="fas fa-file-contract"></i> Choose File
+            </label>
+            <div class="file-name-val" id="val-buildLicense"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>السجل التجاري</label>
+        <div class="custom-file-input">
+            <input type="file" id="commRegister" class="file-input-element">
+            <label for="commRegister" class="upload-btn-brand">
+                <i class="fas fa-file-invoice"></i> Choose File
+            </label>
+            <div class="file-name-val" id="val-commRegister"></div>
+        </div>
+    </div>
+</div>
     <button type="submit" class="submit-btn-brand">إرسال الطلب</button>
        </form>
       <form id="supplyInstallForm" class="service-form" style="display: none;">
@@ -745,13 +766,14 @@
         </div>
     </div>
     <div class="form-group" style="margin-top: 20px;">
-        <label>مخطط السلامة</label>
-        <div class="custom-file-input">
-            <input type="file" id="safetyPlanFile" hidden>
-            <label for="safetyPlanFile" class="upload-btn-brand">
-                <i class="fas fa-file-image"></i> اختر ملف مخطط السلامة
-            </label>
-        </div>
+    <label>مخطط السلامة</label>
+    <div class="custom-file-input">
+        <input type="file" id="safetyPlanFile" class="file-input-element">
+        <label for="safetyPlanFile" class="upload-btn-brand">
+            <i class="fas fa-file-image"></i> اختر ملف مخطط السلامة
+        </label>
+        <div class="file-name-val" id="val-safetyPlanFile"></div>
+    </div>
     </div>
     <button type="submit" class="submit-btn-brand">إرسال الطلب</button>
       </form>
@@ -791,21 +813,22 @@
     </div>
     <div class="form-section-title-brand">تفاصيل الطفايات</div>
         <div class="details-container-brand">
+         <div id="extinguishersDynamicContainer">
         <div class="form-grid-4">
             <div class="form-group">
                 <label>نوع الطفاية</label>
-                <select>
+                <select name="ext_type[]">
                     <option>اختر نوع الطفاية</option>
                     <option>بودرة جافة</option>
                     <option>ثاني أكسيد الكربون CO2</option>
-                    <option> فووم  </option>
-                    <option> مائية  </option>
-                    <option> كيماوية رطبة  </option>
+                    <option>فووم</option>
+                    <option>مائية</option>
+                    <option>كيماوية رطبة</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>وزن الطفاية (كجم)</label>
-                <select>
+                <select name="ext_weight[]">
                     <option>اختر الوزن</option>
                     <option>1 كجم</option>
                     <option>2 كجم</option>
@@ -820,22 +843,23 @@
             </div>
             <div class="form-group">
                 <label>العدد</label>
-                <input type="number" value="0">
+                <input type="number" name="ext_count[]" value="0">
             </div>
             <div class="form-group">
                 <label>نوع الخدمة</label>
-                <select>
+                <select name="ext_service[]">
                     <option>اختر نوع الخدمة</option>
-                    <option>تعبئة </option>
-                    <option>صيانة </option>
-                    <option>  صيانة و تعبئة</option>
+                    <option>تعبئة</option>
+                    <option>صيانة</option>
+                    <option>صيانة وتعبئة</option>
                 </select>
             </div>
         </div>
-        <button type="button" class="add-more-btn">
-            <i class="fas fa-plus-circle"></i> إضافة طفاية أخرى
-        </button>
-    </div>
+         </div>
+    <button type="button" class="add-more-btn" id="addExtinguisherBtn">
+        <i class="fas fa-plus-circle"></i> إضافة طفاية أخرى
+    </button>
+</div>
     <button type="submit" class="submit-btn-brand">إرسال الطلب</button>
      </form>
     </div>

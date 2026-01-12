@@ -194,3 +194,81 @@ if (addSystemBtn) {
         });
     });
 }
+const extContainer = document.getElementById('extinguishersDynamicContainer');
+const addExtBtn = document.getElementById('addExtinguisherBtn');
+
+if (addExtBtn) {
+    addExtBtn.addEventListener('click', () => {
+        const newRow = document.createElement('div');
+        newRow.className = 'form-grid-4';
+        newRow.style.marginTop = '20px';
+        newRow.style.paddingTop = '20px';
+        newRow.style.borderTop = '1px dashed #c8e6c9'; 
+        newRow.style.position = 'relative';
+        newRow.innerHTML = `
+            <div class="form-group">
+                <label>نوع الطفاية</label>
+                <select name="ext_type[]">
+                    <option>اختر نوع الطفاية</option>
+                    <option>بودرة جافة</option>
+                    <option>ثاني أكسيد الكربون CO2</option>
+                    <option>فووم</option>
+                    <option>مائية</option>
+                    <option>كيماوية رطبة</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>وزن الطفاية (كجم)</label>
+                <select name="ext_weight[]">
+                    <option>اختر الوزن</option>
+                    <option>1 كجم</option>
+                    <option>2 كجم</option>
+                    <option>3 كجم</option>
+                    <option>4 كجم</option>
+                    <option>6 كجم</option>
+                    <option>10 كجم</option>
+                    <option>12 كجم</option>
+                    <option>25 كجم</option>
+                    <option>50 كجم</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>العدد</label>
+                <input type="number" name="ext_count[]" value="0">
+            </div>
+            <div class="form-group">
+                <label>نوع الخدمة</label>
+                <select name="ext_service[]">
+                    <option>اختر نوع الخدمة</option>
+                    <option>تعبئة</option>
+                    <option>صيانة</option>
+                    <option>صيانة وتعبئة</option>
+                </select>
+            </div>
+            <button type="button" class="remove-ext-btn" style="position:absolute; top:-10px; left:0; background:#c62828; color:white; border:none; width:25px; height:25px; border-radius:50%; cursor:pointer; font-size:0.8rem;">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+        extContainer.appendChild(newRow);
+        newRow.querySelector('.remove-ext-btn').addEventListener('click', function() {
+            newRow.remove();
+        });
+    });
+}
+document.querySelectorAll('.input-file-brand, .file-input-element').forEach(input => {
+    input.addEventListener('change', function() {
+        const fileName = this.files[0] ? this.files[0].name : "لم يتم اختيار ملف";
+        const nameDisplayById = document.getElementById('val-' + this.id);
+        const statusDivByClass = this.parentElement.querySelector('.file-status');
+
+        if (nameDisplayById) {
+            nameDisplayById.innerText = fileName;
+            nameDisplayById.style.color = "#2e7d32";
+            nameDisplayById.style.fontWeight = "bold";
+        } else if (statusDivByClass) {
+            statusDivByClass.innerText = fileName;
+            statusDivByClass.style.color = "#2e7d32";
+            statusDivByClass.style.fontWeight = "bold";
+        }
+    });
+});
