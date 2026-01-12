@@ -1,4 +1,3 @@
-// --- 1. Mobile Menu Logic (Full Screen & Lock Scroll) ---
 const openBtn = document.getElementById('openMenu');
 const closeBtn = document.getElementById('closeMenu');
 const menu = document.getElementById('mobileMenu');
@@ -9,25 +8,22 @@ if (openBtn) {
     openBtn.onclick = () => {
         menu.classList.add('open');
         if(overlay) overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // منع السكرول عند فتح المنيو
+        document.body.style.overflow = 'hidden'; 
     }
 }
 
 const closeAll = () => {
     menu.classList.remove('open');
     if(overlay) overlay.style.display = 'none';
-    document.body.style.overflow = 'auto'; // إعادة السكرول
+    document.body.style.overflow = 'auto'; 
 }
 
 if (closeBtn) closeBtn.onclick = closeAll;
 if (overlay) overlay.onclick = closeAll;
-
-// إغلاق المنيو عند الضغط على أي رابط بداخلها
 mobileLinks.forEach(link => {
     link.onclick = closeAll;
 });
 
-// --- 2. Slider Logic ---
 const slides = document.querySelectorAll('.slide');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
@@ -59,7 +55,6 @@ if (prevBtn) prevBtn.onclick = () => move(current - 1);
 
 setInterval(() => { if (nextBtn) nextBtn.click(); }, 5000);
 
-// --- 3. Scroll Spy (Active Links) ---
 window.onscroll = () => {
     let currentPos = "";
     document.querySelectorAll("section").forEach(s => {
@@ -71,7 +66,6 @@ window.onscroll = () => {
     });
 };
 
-// --- 4. Global Reveal Animation ---
 document.addEventListener("DOMContentLoaded", function() {
     const globalObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -89,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// --- 5. Modal Logic & WhatsApp Sending ---
 const modal = document.getElementById('modalOverlay');
 const closeModal = document.getElementById('closeModal');
 const requestBtns = document.querySelectorAll('.btn-request');
@@ -109,11 +102,8 @@ if (requestBtns.length > 0) {
     requestBtns.forEach((btn, index) => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            
-            // إخفاء جميع الفورمات
             Object.values(forms).forEach(f => { if(f) f.style.display = 'none'; });
 
-            // إظهار الفورم المناسبة بناءً على ترتيب الخدمات في الـ HTML
             if (index <= 2) { 
                 forms.default.style.display = 'block'; 
                 forms.header.style.display = 'block';
@@ -134,7 +124,6 @@ if (requestBtns.length > 0) {
     });
 }
 
-// دالة عامة لجمع البيانات وإرسالها للواتساب
 function handleFormSubmit(formElement, serviceTitle) {
     formElement.onsubmit = function(e) {
         e.preventDefault();
@@ -153,7 +142,6 @@ function handleFormSubmit(formElement, serviceTitle) {
     };
 }
 
-// ربط جميع الفورمات بالواتساب
 if(forms.default) handleFormSubmit(forms.default, "تقارير فنية وشهادات");
 if(forms.maintenance) handleFormSubmit(forms.maintenance, "عقد صيانة");
 if(forms.engineering) handleFormSubmit(forms.engineering, "مخطط هندسي");
@@ -162,10 +150,47 @@ if(forms.supply) handleFormSubmit(forms.supply, "توريد وتركيب");
 if(forms.rehab) handleFormSubmit(forms.rehab, "إعادة تأهيل");
 if(forms.extinguisher) handleFormSubmit(forms.extinguisher, "صيانة طفايات");
 
-// ربط فورم عرض السعر في سكشن التواصل
 const quoteForm = document.querySelector('.actual-form');
 if(quoteForm) handleFormSubmit(quoteForm, "عرض سعر جديد");
 
-// إغلاق المودال
 if (closeModal) closeModal.onclick = () => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
 window.onclick = (event) => { if (event.target == modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; } }
+const systemsContainer = document.getElementById('systemsDynamicContainer');
+const addSystemBtn = document.getElementById('addNewSystemRow');
+
+if (addSystemBtn) {
+    addSystemBtn.addEventListener('click', () => {
+        const newRow = document.createElement('div');
+        newRow.className = 'systems-row';
+        newRow.style.marginTop = '10px'; 
+        newRow.innerHTML = `
+            <div class="form-group">
+                <label>النظام</label>
+                <select name="system[]">
+                    <option>نظام انذار مبكر</option>
+                    <option>نظام الرش الالي و صناديق الحريق</option>
+                    <option>نظام FM-200</option>
+                    <option>نظام نوفيك 1230</option>
+                    <option>نظام co2</option>
+                    <option>نظام فاير برو</option>
+                    <option>نظام كيتشن هود</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>الحالة</label>
+                <select name="status[]">
+                    <option>اختر الحالة</option>
+                    <option>لا يعمل</option>
+                    <option>يعمل و لكن يحتاج صيانة</option>
+                </select>
+            </div>
+            <button type="button" class="remove-btn" style="background:#c62828; color:white; border:none; width:45px; height:45px; border-radius:10px; cursor:pointer;">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        `;
+        systemsContainer.appendChild(newRow);
+        newRow.querySelector('.remove-btn').addEventListener('click', function() {
+            newRow.remove();
+        });
+    });
+}
